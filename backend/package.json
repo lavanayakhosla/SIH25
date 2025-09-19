@@ -1,0 +1,22 @@
+{
+    "name": "namaste-termservice-backend",
+    "version": "0.1.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "ingest": "node ingest_namaste.js samples/namaste_sample.csv",
+        "sync": "node sync_icd11.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "csv-parse": "^5.6.0",
+        "elasticsearch": "^16.7.3",
+        "express": "^4.18.2",
+        "node-fetch": "^3.3.2",
+        "pg": "^8.10.0",
+        "uuid": "^9.0.0"
+    },
+    "engines": {
+        "node": ">=16"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "mappings": {
+      "properties": {
+        "code": { "type": "keyword" },
+        "display": { "type": "text", "analyzer": "standard" },
+        "definition": { "type": "text" },
+        "synonyms": { "type": "text" },
+        "source": { "type": "keyword" }
+      }
+    }
+  }
+  

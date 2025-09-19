@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "NAMASTE-codesystem-proto",
+  "url": "https://namaste.ayush.gov.in/codesystem/NAMASTE",
+  "version": "2025-09-19",
+  "name": "NAMASTE",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "NAM_0001",
+      "display": "Gulma",
+      "definition": "Obstruction due to accumulation of dosha"
+    },
+    {
+      "code": "NAM_0002",
+      "display": "Arsha",
+      "definition": "Hemorrhoids"
+    },
+    {
+      "code": "NAM_0003",
+      "display": "Amlapitta",
+      "definition": "Acid peptic disorder"
+    },
+    {
+      "code": "NAM_0004",
+      "display": "Apasmara",
+      "definition": "Epilepsy"
+    }
+  ]
+}
