@@ -75,7 +75,7 @@ app.get('/search', async (req, res) => {
 });
 
 // $translate stub - returns candidate matches from ES (prototype)
-app.post('/$translate', async (req, res) => {
+app.post('/\\$translate', async (req, res) => {
   const params = req.body;
   if (!params || !Array.isArray(params.parameter) || !params.parameter.length) {
     return res.status(400).json({ error: 'expected FHIR Parameters with parameter array' });
@@ -148,6 +148,12 @@ app.post('/fhir/Bundle', (req, res) => {
 });
 
 // start server
-app.listen(config.port, () =>
-  console.log(`NAMASTE termservice running on http://localhost:${config.port}`)
-);
+app.listen(config.port, () => {
+  console.log(`NAMASTE termservice running on http://localhost:${config.port}`);
+  console.log('Registered routes:');
+  console.log('- GET /health');
+  console.log('- GET /namaste/codesystem');
+  console.log('- GET /search');
+  console.log('- POST /\\$translate');
+  console.log('- POST /fhir/Bundle');
+});

@@ -8,7 +8,6 @@ export default function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [problemList, setProblemList] = useState([]);
-  const [translateResult, setTranslateResult] = useState(null);
   const [bundleJson, setBundleJson] = useState(null);
 
   const doSearch = async (q) => {
@@ -33,8 +32,6 @@ export default function App() {
         code: item.code,
         display: item.display,
       });
-
-      setTranslateResult(parameters); // store for display
 
       let icdDisplay = null;
       if (parameters && Array.isArray(parameters.parameter)) {
@@ -125,13 +122,6 @@ export default function App() {
 
       <ProblemList items={problemList} onRemove={onRemove} />
 
-      {/* ✅ Show translate result for debugging */}
-      {translateResult && (
-        <div className="card" style={{ marginTop: 12 }}>
-          <h3>Last Translate Result</h3>
-          <pre>{JSON.stringify(translateResult, null, 2)}</pre>
-        </div>
-      )}
 
       <div className="card" style={{ marginTop: 12 }}>
         <h3>Bundle Builder</h3>
