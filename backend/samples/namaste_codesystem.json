@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "NAMASTE-codesystem-proto",
   "url": "https://namaste.ayush.gov.in/codesystem/NAMASTE",
-  "version": "2025-09-19",
+  "version": "2025-09-21",
   "name": "NAMASTE",
   "status": "active",
   "content": "complete",
