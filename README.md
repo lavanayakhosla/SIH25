@@ -1,5 +1,5 @@
 
-# Sanjeevani - SIH 25026
+# Sanjeevaniii - SIH 25026
 
 This project provides a **terminology service** for AYUSH systems (Ayurveda, Siddha, Unani), based on the **NAMASTE Code System**. It allows searching, translating, and retrieving morbidity codes using **FHIR standards** and an **Elasticsearch backend**.
 
