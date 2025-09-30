@@ -5,14 +5,14 @@ This project provides a **terminology service** for AYUSH systems (Ayurveda, Sid
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 * **Frontend (React, Vercel):** https://namaste-icd11.vercel.app/
 * **Backend (Node.js, Render):** https://namaste-backend-jpmi.onrender.com/health
 
 ---
 
-## ✨ Features
+## Features
 
 * Retrieve definitions, synonyms, and mappings
 * FHIR `$translate` API support
@@ -21,7 +21,7 @@ This project provides a **terminology service** for AYUSH systems (Ayurveda, Sid
 
 ---
 
-## ⚙️ Running Locally
+##  Running Locally
 
 If you want to run the project locally instead of using the deployed demo:
 
@@ -75,7 +75,7 @@ npm start
 
 
 
-## 📌 Notes
+##  Notes
 
 * Ensure Elasticsearch is running (locally or Bonsai cluster).
 * If using Bonsai, never commit credentials — keep them in `.env` or Render/Vercel environment variables.
