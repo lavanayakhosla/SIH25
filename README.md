@@ -1,34 +1,83 @@
-# Run instructions (exact)
 
-Prereqs:
-- Node 16+
-- npm
-- Docker & docker-compose (for Postgres + Elasticsearch dev)
+# Sanjeevani - SIH 25026
 
-1) Start infra (Postgres + Elasticsearch)
-   From repo root:
-   $ docker-compose up -d
-   Wait ~20-30s for ES to start.
+This project provides a **terminology service** for AYUSH systems (Ayurveda, Siddha, Unani), based on the **NAMASTE Code System**. It allows searching, translating, and retrieving morbidity codes using **FHIR standards** and an **Elasticsearch backend**.
 
-2) Backend
-   $ cd backend
-   $ npm install
-   $ npm run ingest    # ingests backend/samples/namaste_sample.csv into ES and writes samples/namaste_codesystem.json
-   $ npm start         # starts backend at http://localhost:3000
+---
 
-3) Frontend
-   Open a new terminal:
-   $ cd frontend
-   $ npm install
-   $ npm start
-   The frontend dev server will open (likely http://localhost:3000 or 3001). Proxy is set to backend.
+## 🌐 Live Demo
 
-4) Try it
-   - Open frontend UI, search e.g. "Gulma"
-   - Translate → Add → Build Bundle → Upload Bundle
-   - Or call backend APIs directly:
-     GET http://localhost:3000/health
-     GET http://localhost:3000/namaste/codesystem
-     GET http://localhost:3000/search?q=gulma
-     POST http://localhost:3000/$translate (FHIR Parameters)
-     POST http://localhost:3000/fhir/Bundle (Bundle JSON)
+* **Frontend (React, Vercel):** https://namaste-icd11.vercel.app/
+* **Backend (Node.js, Render):** https://namaste-backend-jpmi.onrender.com/health
+
+---
+
+## ✨ Features
+
+* Retrieve definitions, synonyms, and mappings
+* FHIR `$translate` API support
+* CSV ingestion into Elasticsearch index
+* User-friendly frontend for exploring terminology
+
+---
+
+## ⚙️ Running Locally
+
+If you want to run the project locally instead of using the deployed demo:
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/lavanayakhosla/SIH25.git
+cd SIH25
+```
+
+### 2. Start Backend
+
+```bash
+cd backend
+npm install
+```
+
+Set environment variables (example for Bonsai Elasticsearch):
+
+```bash
+export ES_HOST="https://username:password@your-bonsai-cluster.bonsaisearch.net"
+export ES_INDEX="namaste_terms"
+```
+
+Ingest sample data:
+
+```bash
+node ingest_namaste.js samples/namaste_sample.csv
+```
+
+Run the backend:
+
+```bash
+npm start
+```
+
+By default, the backend runs on **[http://localhost:3000](http://localhost:3000)**.
+
+---
+
+### 3. Start Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+
+---
+
+
+
+## 📌 Notes
+
+* Ensure Elasticsearch is running (locally or Bonsai cluster).
+* If using Bonsai, never commit credentials — keep them in `.env` or Render/Vercel environment variables.
+
+---
