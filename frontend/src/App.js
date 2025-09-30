@@ -307,12 +307,9 @@ export default function App() {
       <footer className="footer">
         <div className="footer-content">
           <p>
-            Website content owned by Ministry of Ayush, Government of India. 
-            Designed, developed and maintained by BISAG-N, Meity-GOI
+           
           </p>
-          <p style={{ marginTop: "10px", fontSize: "12px" }}>
-            Connected to backend at <code>/</code>. For production integrate ABHA OAuth and secure endpoints.
-          </p>
+  
         </div>
       </footer>
     </div>
